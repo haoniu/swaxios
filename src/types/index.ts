@@ -17,6 +17,20 @@ export type Method =
 export interface SwAxiosRequestConfig {
   url: string
   method?: Method
-  data?: string
+  headers?: any
+  data?: any
   params?: any
+  responseType?: XMLHttpRequestResponseType
+  timeout?: number
 }
+
+export interface SwAxiosResponse {
+  data: any
+  status: number
+  statusText: string
+  headers: any
+  config: SwAxiosRequestConfig
+  request: any
+}
+
+export interface SwAxiosPromise extends Promise<SwAxiosResponse> {}

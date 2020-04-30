@@ -1,8 +1,4 @@
-import { SwAxiosRequestConfig } from './types'
-import xhr from './xhr'
+import swaxios from './sw-axios'
 
-function swaxios(config: SwAxiosRequestConfig) {
-  //todo
-  xhr(config)
-}
+export * from './types'
 export default swaxios

@@ -1,6 +1,6 @@
-import axios from '../../src/index'
+import swaxios from '../../src/index'
 
-axios({
+swaxios({
     method: 'get',
     url: '/simple/get',
     params: {
