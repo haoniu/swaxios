@@ -33,4 +33,12 @@ export interface SwAxiosResponse {
   request: any
 }
 
+export interface SwAxiosError extends Error {
+  config: SwAxiosRequestConfig
+  code?: string
+  request?: any
+  response?: SwAxiosResponse
+  isAxiosError: boolean
+}
+
 export interface SwAxiosPromise extends Promise<SwAxiosResponse> {}
